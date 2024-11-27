@@ -1,1 +1,0 @@
-Project Understanding of Images
