@@ -43,6 +43,8 @@ This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You 
 
 If you are using a virtual environment (`venv`), ensure that it is activated before installing dependencies.
 
+---
+
 ## Installation and Usage
 
 ### 1. Setting up the Project:
@@ -116,9 +118,11 @@ The script will display the original image, process it, annotate it, and save th
 
 ## Performance Metrics
 
-- **Accuracy**: The model detects common road objects such as different types of vehicles, traffic lights and pedestrians with reasonable accuracy.
-- **Speed**: The YOLOv5s model is optimized for speed and performs object detection in real-time.
-- **Memory Efficiency**: YOLOv5s is smaller and faster, consuming less memory compared to other larger YOLO models.
+| Metric                            | Value        |
+|-----------------------------------|--------------|
+| Accuracy                          | 80%          |
+| Average Processing Time per Image | 0.12 seconds |
+| Memory Usage                      | 7.58 MB       |
 
 ## References and Documentation
 
