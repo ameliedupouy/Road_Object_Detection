@@ -3,12 +3,12 @@
 
 ## Project Overview
 
-This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You Only Look Once) model to perform object detection on road-related images. The primary goal is to detect and annotate various obstacles on the road such as traffic lights, different types of vehicles, pedestrians and bicycles, to create an object detection system that can be used in automotive assistance systems to improve road safety.
+This project, Road Object Detection, uses the Deap Learning YOLOv5 (You Only Look Once) model to perform object detection on road-related images. The primary goal is to detect and annotate various obstacles on the road such as traffic lights, different types of vehicles, pedestrians and bicycles, to create an object detection system that can be used in automotive assistance systems to improve road safety.
 
 ### Key Objectives:
 - **Object Detection**: Detect and annotate objects in road-related images using YOLOv5.
 - **Image Annotation**: Annotate the detected objects with labels.
-- **Flexible Image Processing**: Users can choose to process a **single image** or **all images** in the input folder.
+- **Flexible Image Processing**: Users can choose to process a single image or all image in the input folder.
 - **Inventory**: Take inventory of the detected objects.
 
 ### Results:
