@@ -3,33 +3,36 @@
 
 ## Project Overview
 
-This project, **Road Object Detection**, uses the **YOLOv5** (You Only Look Once) model to perform object detection on road-related images. The primary goal is to detect and annotate various objects, including cars, pedestrians, bicycles, trucks, and other vehicles.
+This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You Only Look Once) model to perform object detection on road-related images. The primary goal is to detect and annotate various obstacles on the road such as traffic lights, different types of vehicles, pedestrians and bicycles, to create an object detection system that can be used in automotive assistance systems to improve road safety.
 
 ### Key Objectives:
 - **Object Detection**: Detect and annotate objects in road-related images using YOLOv5.
 - **Image Annotation**: Annotate the detected objects with bounding boxes and labels.
 - **Easy Image Selection**: Users can select and process images by entering their corresponding number.
+- **Inventory**: Take inventory of the detected objects.
 
 ### Results:
 - The system accurately detects common road objects in images.
-- Annotated images are saved in the output directory with object bounding boxes and labels.
+- Annotated images are saved in the output directory with object labels.
+- The inventory of detected objects is displayed in the console.
 
 ## Source Code
 
 ### File Structure:
+
 ```bash
 /Road_Object_Detection
 ├── input_images/        # Folder containing input images (.png, .jpg)  
 ├── output_images/       # Folder to save output (annotated) images  
 ├── venv/                # Virtual environment for the project  
 ├── README.md            # Project description and instructions  
-├── object_detection.py  # Source code for object detection and annotation
+├── object_detection.py  # Source code for object detection and annotation  
 ```
 
 ### Code Overview:
 - **object_detection.py**: The main script for detecting and annotating objects using YOLOv5.
 - **select_and_display_image()**: Lets users choose an image by entering a number, then displays both the original and annotated images.
-- **detection_and_annotation()**: Detects and annotates objects in images with YOLOv5.
+- **detection_and_annotation()**: Detects and annotates objects in images with YOLOv5 and take the inventory.
 - **display_image()**: Displays the image using OpenCV.
 
 ### Dependencies:
@@ -61,53 +64,61 @@ If you haven't created the virtual environment yet, you can do so with the follo
 python -m venv venv
 ```
 
-- On Windows:
+On **Windows**:
 
-  ```bash
-  .venv\Scripts ctivate
-  ```
+```bash
+.venv\Scripts ctivate
+```
 
-- On macOS/Linux:
+On **macOS/Linux**:
 
-  ```bash
-  source venv/bin/activate
-  ```
+```bash
+source venv/bin/activate
+```
 
 ### 3. Install Dependencies:
 
-Once the virtual environment is activated, install the required dependencies:
+Install the required libraries, including Torch, OpenCV, and YOLOv5:
+
+Install **Torch** and **OpenCV** using pip:
 
 ```bash
-pip install -r requirements.txt
+pip install torch torchvision opencv-python
 ```
 
-If you don't have a `requirements.txt`, you can install the necessary libraries manually:
+Clone the **YOLOv5** repository and install its dependencies:
 
 ```bash
-pip install torch opencv-python
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+pip install -r requirements.txt
+cd ..
 ```
 
 ### 4. Running the Script:
+You will find images for testing in the `input_images/` folder. You can also test with other images by placing them in the `input_images/` folder.
 
-Place the images you want to process inside the `input_images/` folder.  
 Run the Python script:
 
 ```bash
 python object_detection.py
 ```
 
-When prompted, enter the number of the image to process. For example, type `1` to process the first image.
+When prompted, enter the number (or the name) corresponding to the image you want to process.
 
-### Example Usage:
+#### Example Usage:
 
 ```bash
 Enter the number of the image to process: 1
 Processing: input_images/1.png -> output_images/1.png
 ```
 
+The script will display the original image, process it, annotate it, and save the annotated image in the `output_images/` folder.
+
+
 ## Performance Metrics
 
-- **Accuracy**: The model detects common road objects such as vehicles and pedestrians with reasonable accuracy.
+- **Accuracy**: The model detects common road objects such as different types of vehicles, traffic lights and pedestrians with reasonable accuracy.
 - **Speed**: The YOLOv5s model is optimized for speed and performs object detection in real-time.
 - **Memory Efficiency**: YOLOv5s is smaller and faster, consuming less memory compared to other larger YOLO models.
 
@@ -120,7 +131,7 @@ Processing: input_images/1.png -> output_images/1.png
 ## Issues and Contributions
 
 ### Known Issues:
-- Only basic road objects are detected, such as vehicles and pedestrians.
+- Only basic road objects are detected, such as different types of vehicle, traffic lights and pedestrians.
 - Real-time performance may vary based on hardware (CPU vs. GPU).
 
 ### How to Contribute:
@@ -129,7 +140,6 @@ Processing: input_images/1.png -> output_images/1.png
 
 ## Future Work
 
-- **Add Additional Object Classes**: Extend the detection to include other objects such as traffic signs and road obstacles.
-- **Improve Model Accuracy**: Fine-tune the model to improve detection accuracy for road objects.
+- **Add Additional Object Classes**: Extend the detection to include other objects such as road signs.
 - **Real-time Video Processing**: Implement real-time video object detection.
-- **User Interface**: Develop a graphical interface for easier interaction.
+
