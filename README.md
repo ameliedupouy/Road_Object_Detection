@@ -1,5 +1,5 @@
 
-# Road Object Detection Using YOLOv5
+# Road Object Detection
 
 ## Project Overview
 
@@ -17,12 +17,14 @@ This project, **Road Object Detection**, uses the **YOLOv5** (You Only Look Once
 ## Source Code
 
 ### File Structure:
+```bash
 /Road_Object_Detection
 ├── input_images/        # Folder containing input images (.png, .jpg)  
 ├── output_images/       # Folder to save output (annotated) images  
 ├── venv/                # Virtual environment for the project  
 ├── README.md            # Project description and instructions  
-├── object_detection.py  # Source code for object detection and annotation  
+├── object_detection.py  # Source code for object detection and annotation
+```
 
 ### Code Overview:
 - **object_detection.py**: The main script for detecting and annotating objects using YOLOv5.
