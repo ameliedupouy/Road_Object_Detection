@@ -43,8 +43,6 @@ This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You 
 
 If you are using a virtual environment (`venv`), ensure that it is activated before installing dependencies.
 
----
-
 ## Installation and Usage
 
 ### 1. Setting up the Project:
