@@ -7,8 +7,8 @@ This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You 
 
 ### Key Objectives:
 - **Object Detection**: Detect and annotate objects in road-related images using YOLOv5.
-- **Image Annotation**: Annotate the detected objects with bounding boxes and labels.
-- **Easy Image Selection**: Users can select and process images by entering their corresponding number.
+- **Image Annotation**: Annotate the detected objects with labels.
+- **Flexible Image Processing**: Users can choose to process a **single image** or **all images** in the input folder.
 - **Inventory**: Take inventory of the detected objects.
 
 ### Results:
@@ -31,8 +31,8 @@ This project, **Road Object Detection**, uses the Deap Learning **YOLOv5** (You 
 
 ### Code Overview:
 - **object_detection.py**: The main script for detecting and annotating objects using YOLOv5.
-- **select_and_display_image()**: Lets users choose an image by entering a number, then displays both the original and annotated images.
-- **detection_and_annotation()**: Detects and annotates objects in images with YOLOv5 and take the inventory.
+- **process_single_image()**: Allows users to choose a single image by entering its number, then displays the annotated images and saves the result in the output folder.
+- **process_all_images()**: Processes all images in the input folder, annotates them, and saves the results in the output folder.- **detection_and_annotation()**: Detects and annotates objects in images with YOLOv5 and take the inventory.
 - **display_image()**: Displays the image using OpenCV.
 
 ### Dependencies:
@@ -104,16 +104,28 @@ Run the Python script:
 python object_detection.py
 ```
 
-When prompted, enter the number (or the name) corresponding to the image you want to process.
+
+When prompted, you can choose whether to process:
+
+- A single image by entering its corresponding number (or name).
+- All images in the input folder by selecting the appropriate option.
 
 #### Example Usage:
 
-```bash
+##### Processing a single image:
+
+```plaintext
+Do you want to process (1) a single image or (2) all images? Enter 1 or 2: 1
 Enter the number of the image to process: 1
 Processing: input_images/1.png -> output_images/1.png
 ```
 
-The script will display the original image, process it, annotate it, and save the annotated image in the `output_images/` folder.
+##### Processing all images:
+
+```plaintext
+Do you want to process (1) a single image or (2) all images? Enter 1 or 2: 2
+Processing 5 images...
+```
 
 
 ## Performance Metrics
