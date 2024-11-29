@@ -122,7 +122,7 @@ The script will display the original image, process it, annotate it, and save th
 |-----------------------------------|--------------|
 | Accuracy                          | 80%          |
 | Average Processing Time per Image | 0.12 seconds |
-| Memory Usage                      | 7.58 MB       |
+| Average Memory Usage per Image    | 7.58 MB       |
 
 ## References and Documentation
 
